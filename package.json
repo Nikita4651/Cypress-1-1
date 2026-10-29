@@ -7,7 +7,10 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run --browser chrome --config-file cypress.config.js --headed",
+    "testheadless": "cypress run --browser chrome --config-file cypress.config.js --headless",
+    "mobile": "cypress run --browser firefox --config-file cypress.mobile.config.js --headed",
+    "mobileheadless": "cypress run --browser firefox --config-file cypress.mobile.config.js --headless"
   },
   "devDependencies": {
     "cypress": "^16.1.1"
